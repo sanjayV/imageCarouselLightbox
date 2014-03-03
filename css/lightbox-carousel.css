@@ -1,0 +1,116 @@
+.carouselLightboxOverlay {
+	background: none repeat scroll 0 0 #000000;
+    height: 100%;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+    display: none;
+}
+
+.carouselLightboxDiv {
+	background: url("../img/carouselLightboxLoader.gif") no-repeat scroll center center #FFFFFF;
+    border: 1px solid #000000;
+    height: 100px;
+    position: absolute;
+    text-align: center;
+    width: 100px;
+    z-index: 51;
+    top: 50%;
+    left: 50%;
+    padding: 30px 10px 10px;
+    display: none;
+}	
+
+.carouselLightboxDiv .loaderImg {
+	margin-top: 30px;
+}
+
+.carouselLightboxDiv .closeCarouselLightbox {
+    background: url("../img/close_middle.png") no-repeat;
+    height: 26px;
+    position: absolute;
+    right: 10px;
+    top: 2px;
+    width: 26px;
+    z-index: 52;
+    text-decoration: none;
+}
+
+.carouselLightboxDiv .imgTitleCarouselLightbox {
+    color: #630460;
+    height: 22px;
+    left: 10px;
+    overflow: hidden;
+    position: absolute;
+    text-align: left;
+    text-overflow: ellipsis;
+    top: 5px;
+    white-space: nowrap;
+    width: 50%;
+}
+
+.carouselLightboxDiv ul {
+	display: inline-block;
+	float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.carouselLightboxDiv ul li {
+	display: none;
+	position: absolute;
+}
+
+.carouselLightboxDiv ul li img {
+	float: left;
+    max-height: 600px;
+    max-width: 600px;
+}
+
+.carouselLightboxDiv ul li.active {
+	display: block;
+}
+
+.carouselLightboxDiv .carouselLightboxPrev,
+.carouselLightboxDiv .carouselLightboxNext {
+    background: url("../img/next-prev.png") no-repeat;
+    height: 46px;
+    width: 35px;
+    position: absolute;
+    z-index: 52;
+    top: 45%;
+    text-decoration: none;
+    
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carouselLightboxDiv .carouselLightboxPrev:focus,
+.carouselLightboxDiv .carouselLightboxNext:focus{
+    outline:0; /*removes the dotted border*/
+    border: none;
+}
+
+.carouselLightboxDiv .carouselLightboxPrev {
+    left: 0px;
+    background-position: 10px 0px;    
+}
+
+.carouselLightboxDiv .carouselLightboxNext {
+    right: 0px;
+    background-position: 0px -46px;
+}
+
+.carouselLightboxDiv:hover .carouselLightboxPrev,
+.carouselLightboxDiv:hover .carouselLightboxNext,
+.carouselLightboxDiv:hover .addToLookbook{
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hide {
+    display: none !important;
+}
