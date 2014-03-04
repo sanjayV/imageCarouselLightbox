@@ -90,11 +90,12 @@
                         });                    
                     }
 
-                    _this.imgTopOffset = Math.max(0, (($(window).height()/2)) + $(window).scrollTop());
+                    var scrollHeight = parseInt($(window).scrollTop());
+                    _this.imgTopOffset = Math.max(0, (($(window).height()/2)) + scrollHeight);
                     //$('.carouselLightboxDiv').css('top',_this.imgTopOffset);
 
                     $('.carouselLightboxDiv').animate({
-                        margin: "-" + (_imgThis.height + (_this.divTopPadding))/2 +"px 0 0 -" + (_imgThis.width + (_this.divLeftPadding))/2 + "px", 
+                        margin: -1* parseInt((_imgThis.height + (_this.divTopPadding))/2 - scrollHeight) +"px 0 0 " + -1*(_imgThis.width + (_this.divLeftPadding))/2 + "px", 
                         width: this.width, 
                         height: this.height
                     }, 400, function() {
@@ -190,6 +191,8 @@
                 var img = new Image();
                 img.onload = function() {
                     var _imgThis = this;
+                    var scrollHeight = parseInt($(window).scrollTop());
+
                     if (this.width >= _this.maxWidth || this.height >= _this.maxHeight) {
                         
                         _this.getHeightWidthRatio(_imgThis.width, _imgThis.height, function(newWidth, newHeight){
@@ -205,7 +208,7 @@
                             .css('height', parseInt(this.height) - (_this.divTopPadding)+'px');
 
                     $('.carouselLightboxDiv').animate({
-                        margin: "-" + (_imgThis.height+(_this.divTopPadding))/2 +"px 0 0 -" + (_imgThis.width+(_this.divLeftPadding))/2 + "px",
+                        margin: -1* parseInt((_imgThis.height+(_this.divTopPadding))/2 - scrollHeight) +"px 0 0 " + -1*(_imgThis.width+(_this.divLeftPadding))/2 + "px",
                         width: this.width+"px", 
                         height: this.height+"px"
                     }, 400, function() {
