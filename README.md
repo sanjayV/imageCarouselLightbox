@@ -8,7 +8,7 @@ Structure :-
 
 Include "lightbox-carousel.js" and "lightbox-carousel.css" in header.
 
-<pre>
+<xmp id="snippet-container">
 <link href="css/lightbox-carousel.css" type="text/css" rel="stylesheet">
 <script type="text/javascript" src="js/lightbox-carousel.js"></script>
 
@@ -32,6 +32,6 @@ Include "lightbox-carousel.js" and "lightbox-carousel.css" in header.
 		$(".mainClass").lightboxCarousel();
 	})
 </script>
-</pre>
+</xmp>
 
 Image title will display in popup header.
