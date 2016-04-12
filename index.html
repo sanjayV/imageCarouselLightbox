@@ -7,8 +7,10 @@
 		<link href="css/lightbox-carousel.css" type="text/css" rel="stylesheet">
 		<script type="text/javascript" src="js/lightbox-carousel.js"></script>
 		<script type="text/javascript">
-			$(function(){
-				$(".main").lightboxCarousel();
+			$(function() {
+                var LBC = new carouselLightbox({
+                    "selector": ".main"
+                });
 			})
 		</script>
 		<!-- section end -->
